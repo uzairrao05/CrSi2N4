@@ -1,0 +1,5 @@
+&INPUT
+   fildyn = 'crsi2n4.dyn'
+   zasr   = 'crystal'
+   flfrc  = 'crsi2n4.fc'
+/
