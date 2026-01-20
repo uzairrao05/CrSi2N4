@@ -1,5 +1,0 @@
-&BANDS
-    prefix       = 'crsi2n4'
-    outdir       = './tmp'
-    filband      = 'bands.dat'
-/
