@@ -1,0 +1,3 @@
+&INPUTPP
+outdir = './tmp'
+prefix = 'crsi2n4'
