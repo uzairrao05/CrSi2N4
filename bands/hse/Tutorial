@@ -1,0 +1,12 @@
+Step 01:
+  Perform SCF calculation with HES functional as done in the scf.in file here.
+Step 02:
+  Perform the NSCF calculation
+Step 03: 
+  Do wannier90 calculation with the file name same as the prefix in the scf.in. such as i used crsi2n4.win as my prefix was crsi2n4 
+    i) First You need to do:
+        wannier90.x -pp crsi2n4.win   (This is preprocessing; run without mpirun)
+    ii) After this, Pw to wannier90 by:
+        mpirun -np 1 pw2wannier90.x -in pw2wann.in >pw2wann.out
+    iii) Again, Wannier90 post-processing with the same file. no changes in the crsi2n4.win is required.
+        wannier90.x crsi2n4.win
