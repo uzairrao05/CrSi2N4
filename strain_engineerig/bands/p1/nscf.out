@@ -1,0 +1,1900 @@
+
+     Program PWSCF v.7.4.1 starts on 13Mar2026 at  3:13:52 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+     2926 MiB available memory on the printing compute node when the environment starts
+ 
+     Reading input from nscf.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+
+     Atomic positions and unit cell read from directory:
+     ./tmp/crsi2n4.save/
+ 
+     Message from routine setup:
+     no reason to have ecutrho>4*ecutwfc
+ 
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+ 
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum         817     649    199               135261    96835   15451
+ 
+     Using Slab Decomposition
+ 
+
+
+     bravais-lattice index     =            4
+     lattice parameter (alat)  =       5.4281  a.u.
+     unit-cell volume          =    1001.3459 (a.u.)^3
+     number of atoms/cell      =            7
+     number of atomic types    =            3
+     number of electrons       =        42.00
+     number of Kohn-Sham states=           21
+     kinetic-energy cutoff     =      80.0000  Ry
+     charge density cutoff     =     400.0000  Ry
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+
+     GPU acceleration is ACTIVE.  1 visible GPUs per MPI rank
+     GPU-aware MPI enabled
+
+
+     GPU used by master process:
+
+        Device Number: 0
+        Device name: NVIDIA RTX A2000 12GB
+        Compute capability : 86
+        Ratio of single to double precision performance  : 64
+        Memory Clock Rate (KHz): 6001000
+        Memory Bus Width (bits): 192
+        Peak Memory Bandwidth (GB/s): 288.05
+
+     celldm(1)=   5.428125  celldm(2)=   0.000000  celldm(3)=   7.229429
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (  -0.500000   0.866025   0.000000 )  
+               a(3) = (   0.000000   0.000000   7.229429 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.577350 -0.000000 )  
+               b(2) = (  0.000000  1.154701  0.000000 )  
+               b(3) = (  0.000000 -0.000000  0.138324 )  
+
+
+     PseudoPot. # 1 for Cr read from file:
+     /home/rao/Desktop/pseudo/ONCVPSP/sg15/Cr_ONCV_PBE_sr.upf
+     MD5 check sum: 8c25700f94aee329d8014e8d8708abb4
+     Pseudo is Norm-conserving, Zval = 14.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1490 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+
+     PseudoPot. # 2 for Si read from file:
+     /home/rao/Desktop/pseudo/ONCVPSP/sg15/Si_ONCV_PBE_sr.upf
+     MD5 check sum: 8553c464762ac42b85b1eed164b4d029
+     Pseudo is Norm-conserving, Zval =  4.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1510 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+
+     PseudoPot. # 3 for N  read from file:
+     /home/rao/Desktop/pseudo/ONCVPSP/sg15/N_ONCV_PBE_sr.upf
+     MD5 check sum: 584dff68b02d160f04ff099e3496afa1
+     Pseudo is Norm-conserving, Zval =  5.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1058 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+
+     atomic species   valence    mass     pseudopotential
+     Cr               14.00    51.99600     Cr( 1.00)
+     Si                4.00    28.08600     Si( 1.00)
+     N                 5.00    14.00700     N ( 1.00)
+
+     No symmetry found
+
+
+                                    s                        frac. trans.
+
+      isym =  1     identity                                     
+
+ cryst.   s( 1) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 1) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+     point group C_1 (1)    
+     there are  1 classes
+     the character table:
+
+       E    
+A      1.00
+
+     the symmetry operations in each class and the name of the first element:
+
+     E        1
+          identity                                               
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1        Cr     tau(   1) = (   0.7857138   0.1237083   3.0925906  )
+         2        N      tau(   2) = (   0.2856744   0.4124073   2.6951636  )
+         3        N      tau(   3) = (   0.2856922   0.4123947   3.4953861  )
+         4        N      tau(   4) = (   0.7857248   0.1236935   4.2941203  )
+         5        N      tau(   5) = (  -0.2142869   0.7010640   1.9042883  )
+         6        Si     tau(   6) = (   0.2857211   0.4123842   2.0863348  )
+         7        Si     tau(   7) = (   0.2857276   0.4123672   4.1085750  )
+
+   Crystallographic axes
+
+     site n.     atom                  positions (cryst. coord.)
+         1        Cr     tau(   1) = (  0.8571368  0.1428460  0.4277780  )
+         2        N      tau(   2) = (  0.5237778  0.4762069  0.3728045  )
+         3        N      tau(   3) = (  0.5237884  0.4761924  0.4834941  )
+         4        N      tau(   4) = (  0.8571393  0.1428289  0.5939778  )
+         5        N      tau(   5) = (  0.1904725  0.8095189  0.2634078  )
+         6        Si     tau(   6) = (  0.5238112  0.4761802  0.2885892  )
+         7        Si     tau(   7) = (  0.5238079  0.4761606  0.5683125  )
+
+     number of k points=   100
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0102041
+        k(    2) = (   0.0000000   0.0824786   0.0000000), wk =   0.0204082
+        k(    3) = (   0.0000000   0.1649572   0.0000000), wk =   0.0204082
+        k(    4) = (   0.0000000   0.2474358   0.0000000), wk =   0.0204082
+        k(    5) = (   0.0000000   0.3299144   0.0000000), wk =   0.0204082
+        k(    6) = (   0.0000000   0.4123930   0.0000000), wk =   0.0204082
+        k(    7) = (   0.0000000   0.4948717   0.0000000), wk =   0.0204082
+        k(    8) = (   0.0000000  -0.5773503   0.0000000), wk =   0.0102041
+        k(    9) = (   0.0714286   0.1237179   0.0000000), wk =   0.0204082
+        k(   10) = (   0.0714286   0.2061965   0.0000000), wk =   0.0204082
+        k(   11) = (   0.0714286   0.2886751   0.0000000), wk =   0.0204082
+        k(   12) = (   0.0714286   0.3711537   0.0000000), wk =   0.0204082
+        k(   13) = (   0.0714286   0.4536324   0.0000000), wk =   0.0204082
+        k(   14) = (   0.0714286   0.5361110   0.0000000), wk =   0.0204082
+        k(   15) = (   0.1428571   0.2474358   0.0000000), wk =   0.0204082
+        k(   16) = (   0.1428571   0.3299144   0.0000000), wk =   0.0204082
+        k(   17) = (   0.1428571   0.4123930   0.0000000), wk =   0.0204082
+        k(   18) = (   0.1428571   0.4948717   0.0000000), wk =   0.0204082
+        k(   19) = (   0.1428571   0.5773503   0.0000000), wk =   0.0204082
+        k(   20) = (   0.2142857   0.3711537   0.0000000), wk =   0.0204082
+        k(   21) = (   0.2142857   0.4536324   0.0000000), wk =   0.0204082
+        k(   22) = (   0.2142857   0.5361110   0.0000000), wk =   0.0204082
+        k(   23) = (   0.2857143   0.4948717   0.0000000), wk =   0.0204082
+        k(   24) = (   0.2857143   0.5773503   0.0000000), wk =   0.0204082
+        k(   25) = (  -0.0714286   0.0412393   0.0000000), wk =   0.0204082
+        k(   26) = (   0.0714286   0.0412393   0.0000000), wk =   0.0204082
+        k(   27) = (  -0.1428571   0.0824786   0.0000000), wk =   0.0204082
+        k(   28) = (   0.1428571   0.0824786   0.0000000), wk =   0.0204082
+        k(   29) = (  -0.2142857   0.1237179   0.0000000), wk =   0.0204082
+        k(   30) = (   0.2142857   0.1237179   0.0000000), wk =   0.0204082
+        k(   31) = (  -0.2857143   0.1649572   0.0000000), wk =   0.0204082
+        k(   32) = (   0.2857143   0.1649572   0.0000000), wk =   0.0204082
+        k(   33) = (  -0.3571429   0.2061965   0.0000000), wk =   0.0204082
+        k(   34) = (   0.3571429   0.2061965   0.0000000), wk =   0.0204082
+        k(   35) = (  -0.4285714   0.2474358   0.0000000), wk =   0.0204082
+        k(   36) = (   0.4285714   0.2474358   0.0000000), wk =   0.0204082
+        k(   37) = (   0.5000000  -0.2886751   0.0000000), wk =   0.0102041
+        k(   38) = (  -0.5000000  -0.2886751   0.0000000), wk =   0.0102041
+        k(   39) = (  -0.0714286   0.1237179   0.0000000), wk =   0.0204082
+        k(   40) = (   0.1428571   0.0000000   0.0000000), wk =   0.0204082
+        k(   41) = (  -0.0714286   0.2061965   0.0000000), wk =   0.0204082
+        k(   42) = (  -0.1428571   0.1649572   0.0000000), wk =   0.0204082
+        k(   43) = (   0.2142857   0.0412393   0.0000000), wk =   0.0204082
+        k(   44) = (  -0.1428571  -0.1649572   0.0000000), wk =   0.0204082
+        k(   45) = (   0.2142857  -0.0412393   0.0000000), wk =   0.0204082
+        k(   46) = (  -0.0714286   0.2886751   0.0000000), wk =   0.0204082
+        k(   47) = (  -0.2142857   0.2061965   0.0000000), wk =   0.0204082
+        k(   48) = (   0.2857143   0.0824786   0.0000000), wk =   0.0204082
+        k(   49) = (  -0.2142857  -0.2061965   0.0000000), wk =   0.0204082
+        k(   50) = (   0.2857143  -0.0824786   0.0000000), wk =   0.0204082
+        k(   51) = (  -0.0714286   0.3711537   0.0000000), wk =   0.0204082
+        k(   52) = (  -0.2857143   0.2474358   0.0000000), wk =   0.0204082
+        k(   53) = (   0.3571429   0.1237179   0.0000000), wk =   0.0204082
+        k(   54) = (  -0.2857143  -0.2474358   0.0000000), wk =   0.0204082
+        k(   55) = (   0.3571429  -0.1237179   0.0000000), wk =   0.0204082
+        k(   56) = (  -0.0714286   0.4536324   0.0000000), wk =   0.0204082
+        k(   57) = (  -0.3571429   0.2886751   0.0000000), wk =   0.0204082
+        k(   58) = (   0.4285714   0.1649572   0.0000000), wk =   0.0204082
+        k(   59) = (  -0.3571429  -0.2886751   0.0000000), wk =   0.0204082
+        k(   60) = (   0.4285714  -0.1649572   0.0000000), wk =   0.0204082
+        k(   61) = (  -0.0714286   0.5361110   0.0000000), wk =   0.0204082
+        k(   62) = (  -0.4285714   0.3299144   0.0000000), wk =   0.0204082
+        k(   63) = (   0.5000000   0.2061965   0.0000000), wk =   0.0204082
+        k(   64) = (  -0.4285714  -0.3299144   0.0000000), wk =   0.0204082
+        k(   65) = (   0.5000000  -0.2061965   0.0000000), wk =   0.0204082
+        k(   66) = (  -0.1428571   0.2474358   0.0000000), wk =   0.0204082
+        k(   67) = (   0.2857143   0.0000000   0.0000000), wk =   0.0204082
+        k(   68) = (  -0.1428571   0.3299144   0.0000000), wk =   0.0204082
+        k(   69) = (  -0.2142857   0.2886751   0.0000000), wk =   0.0204082
+        k(   70) = (   0.3571429   0.0412393   0.0000000), wk =   0.0204082
+        k(   71) = (  -0.2142857  -0.2886751   0.0000000), wk =   0.0204082
+        k(   72) = (   0.3571429  -0.0412393   0.0000000), wk =   0.0204082
+        k(   73) = (  -0.1428571   0.4123930   0.0000000), wk =   0.0204082
+        k(   74) = (  -0.2857143   0.3299144   0.0000000), wk =   0.0204082
+        k(   75) = (   0.4285714   0.0824786   0.0000000), wk =   0.0204082
+        k(   76) = (  -0.2857143  -0.3299144   0.0000000), wk =   0.0204082
+        k(   77) = (   0.4285714  -0.0824786   0.0000000), wk =   0.0204082
+        k(   78) = (  -0.1428571   0.4948717   0.0000000), wk =   0.0204082
+        k(   79) = (  -0.3571429   0.3711537   0.0000000), wk =   0.0204082
+        k(   80) = (   0.5000000   0.1237179   0.0000000), wk =   0.0204082
+        k(   81) = (  -0.3571429  -0.3711537   0.0000000), wk =   0.0204082
+        k(   82) = (   0.5000000  -0.1237179   0.0000000), wk =   0.0204082
+        k(   83) = (  -0.4285714   0.4123930   0.0000000), wk =   0.0204082
+        k(   84) = (   0.5714286   0.1649572   0.0000000), wk =   0.0204082
+        k(   85) = (  -0.2142857   0.3711537   0.0000000), wk =   0.0204082
+        k(   86) = (   0.4285714   0.0000000   0.0000000), wk =   0.0204082
+        k(   87) = (  -0.2142857   0.4536324   0.0000000), wk =   0.0204082
+        k(   88) = (  -0.2857143   0.4123930   0.0000000), wk =   0.0204082
+        k(   89) = (   0.5000000   0.0412393   0.0000000), wk =   0.0204082
+        k(   90) = (  -0.2857143  -0.4123930   0.0000000), wk =   0.0204082
+        k(   91) = (   0.5000000  -0.0412393   0.0000000), wk =   0.0204082
+        k(   92) = (  -0.2142857   0.5361110   0.0000000), wk =   0.0204082
+        k(   93) = (  -0.3571429   0.4536324   0.0000000), wk =   0.0204082
+        k(   94) = (   0.5714286   0.0824786   0.0000000), wk =   0.0204082
+        k(   95) = (  -0.3571429  -0.4536324   0.0000000), wk =   0.0204082
+        k(   96) = (   0.5714286  -0.0824786   0.0000000), wk =   0.0204082
+        k(   97) = (  -0.2857143   0.4948717   0.0000000), wk =   0.0204082
+        k(   98) = (   0.5714286   0.0000000   0.0000000), wk =   0.0204082
+        k(   99) = (  -0.3571429   0.5361110   0.0000000), wk =   0.0204082
+        k(  100) = (   0.6428571   0.0412393   0.0000000), wk =   0.0204082
+
+                       cryst. coord.
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0102041
+        k(    2) = (   0.0000000   0.0714286   0.0000000), wk =   0.0204082
+        k(    3) = (   0.0000000   0.1428571   0.0000000), wk =   0.0204082
+        k(    4) = (   0.0000000   0.2142857   0.0000000), wk =   0.0204082
+        k(    5) = (   0.0000000   0.2857143   0.0000000), wk =   0.0204082
+        k(    6) = (   0.0000000   0.3571429   0.0000000), wk =   0.0204082
+        k(    7) = (   0.0000000   0.4285714   0.0000000), wk =   0.0204082
+        k(    8) = (   0.0000000  -0.5000000   0.0000000), wk =   0.0102041
+        k(    9) = (   0.0714286   0.0714286   0.0000000), wk =   0.0204082
+        k(   10) = (   0.0714286   0.1428571   0.0000000), wk =   0.0204082
+        k(   11) = (   0.0714286   0.2142857   0.0000000), wk =   0.0204082
+        k(   12) = (   0.0714286   0.2857143   0.0000000), wk =   0.0204082
+        k(   13) = (   0.0714286   0.3571429   0.0000000), wk =   0.0204082
+        k(   14) = (   0.0714286   0.4285714   0.0000000), wk =   0.0204082
+        k(   15) = (   0.1428571   0.1428571   0.0000000), wk =   0.0204082
+        k(   16) = (   0.1428571   0.2142857   0.0000000), wk =   0.0204082
+        k(   17) = (   0.1428571   0.2857143   0.0000000), wk =   0.0204082
+        k(   18) = (   0.1428571   0.3571429   0.0000000), wk =   0.0204082
+        k(   19) = (   0.1428571   0.4285714   0.0000000), wk =   0.0204082
+        k(   20) = (   0.2142857   0.2142857   0.0000000), wk =   0.0204082
+        k(   21) = (   0.2142857   0.2857143   0.0000000), wk =   0.0204082
+        k(   22) = (   0.2142857   0.3571429   0.0000000), wk =   0.0204082
+        k(   23) = (   0.2857143   0.2857143   0.0000000), wk =   0.0204082
+        k(   24) = (   0.2857143   0.3571429   0.0000000), wk =   0.0204082
+        k(   25) = (  -0.0714286   0.0714286   0.0000000), wk =   0.0204082
+        k(   26) = (   0.0714286   0.0000000   0.0000000), wk =   0.0204082
+        k(   27) = (  -0.1428571   0.1428571   0.0000000), wk =   0.0204082
+        k(   28) = (   0.1428571   0.0000000   0.0000000), wk =   0.0204082
+        k(   29) = (  -0.2142857   0.2142857   0.0000000), wk =   0.0204082
+        k(   30) = (   0.2142857  -0.0000000   0.0000000), wk =   0.0204082
+        k(   31) = (  -0.2857143   0.2857143   0.0000000), wk =   0.0204082
+        k(   32) = (   0.2857143   0.0000000   0.0000000), wk =   0.0204082
+        k(   33) = (  -0.3571429   0.3571429   0.0000000), wk =   0.0204082
+        k(   34) = (   0.3571429   0.0000000   0.0000000), wk =   0.0204082
+        k(   35) = (  -0.4285714   0.4285714   0.0000000), wk =   0.0204082
+        k(   36) = (   0.4285714  -0.0000000   0.0000000), wk =   0.0204082
+        k(   37) = (   0.5000000  -0.5000000   0.0000000), wk =   0.0102041
+        k(   38) = (  -0.5000000  -0.0000000   0.0000000), wk =   0.0102041
+        k(   39) = (  -0.0714286   0.1428571   0.0000000), wk =   0.0204082
+        k(   40) = (   0.1428571  -0.0714286   0.0000000), wk =   0.0204082
+        k(   41) = (  -0.0714286   0.2142857   0.0000000), wk =   0.0204082
+        k(   42) = (  -0.1428571   0.2142857   0.0000000), wk =   0.0204082
+        k(   43) = (   0.2142857  -0.0714286   0.0000000), wk =   0.0204082
+        k(   44) = (  -0.1428571  -0.0714286   0.0000000), wk =   0.0204082
+        k(   45) = (   0.2142857  -0.1428571   0.0000000), wk =   0.0204082
+        k(   46) = (  -0.0714286   0.2857143   0.0000000), wk =   0.0204082
+        k(   47) = (  -0.2142857   0.2857143   0.0000000), wk =   0.0204082
+        k(   48) = (   0.2857143  -0.0714286   0.0000000), wk =   0.0204082
+        k(   49) = (  -0.2142857  -0.0714286   0.0000000), wk =   0.0204082
+        k(   50) = (   0.2857143  -0.2142857   0.0000000), wk =   0.0204082
+        k(   51) = (  -0.0714286   0.3571429   0.0000000), wk =   0.0204082
+        k(   52) = (  -0.2857143   0.3571429   0.0000000), wk =   0.0204082
+        k(   53) = (   0.3571429  -0.0714286   0.0000000), wk =   0.0204082
+        k(   54) = (  -0.2857143  -0.0714286   0.0000000), wk =   0.0204082
+        k(   55) = (   0.3571429  -0.2857143   0.0000000), wk =   0.0204082
+        k(   56) = (  -0.0714286   0.4285714   0.0000000), wk =   0.0204082
+        k(   57) = (  -0.3571429   0.4285714   0.0000000), wk =   0.0204082
+        k(   58) = (   0.4285714  -0.0714286   0.0000000), wk =   0.0204082
+        k(   59) = (  -0.3571429  -0.0714286   0.0000000), wk =   0.0204082
+        k(   60) = (   0.4285714  -0.3571429   0.0000000), wk =   0.0204082
+        k(   61) = (  -0.0714286   0.5000000   0.0000000), wk =   0.0204082
+        k(   62) = (  -0.4285714   0.5000000   0.0000000), wk =   0.0204082
+        k(   63) = (   0.5000000  -0.0714286   0.0000000), wk =   0.0204082
+        k(   64) = (  -0.4285714  -0.0714286   0.0000000), wk =   0.0204082
+        k(   65) = (   0.5000000  -0.4285714   0.0000000), wk =   0.0204082
+        k(   66) = (  -0.1428571   0.2857143   0.0000000), wk =   0.0204082
+        k(   67) = (   0.2857143  -0.1428571   0.0000000), wk =   0.0204082
+        k(   68) = (  -0.1428571   0.3571429   0.0000000), wk =   0.0204082
+        k(   69) = (  -0.2142857   0.3571429   0.0000000), wk =   0.0204082
+        k(   70) = (   0.3571429  -0.1428571   0.0000000), wk =   0.0204082
+        k(   71) = (  -0.2142857  -0.1428571   0.0000000), wk =   0.0204082
+        k(   72) = (   0.3571429  -0.2142857   0.0000000), wk =   0.0204082
+        k(   73) = (  -0.1428571   0.4285714   0.0000000), wk =   0.0204082
+        k(   74) = (  -0.2857143   0.4285714   0.0000000), wk =   0.0204082
+        k(   75) = (   0.4285714  -0.1428571   0.0000000), wk =   0.0204082
+        k(   76) = (  -0.2857143  -0.1428571   0.0000000), wk =   0.0204082
+        k(   77) = (   0.4285714  -0.2857143   0.0000000), wk =   0.0204082
+        k(   78) = (  -0.1428571   0.5000000   0.0000000), wk =   0.0204082
+        k(   79) = (  -0.3571429   0.5000000   0.0000000), wk =   0.0204082
+        k(   80) = (   0.5000000  -0.1428571   0.0000000), wk =   0.0204082
+        k(   81) = (  -0.3571429  -0.1428571   0.0000000), wk =   0.0204082
+        k(   82) = (   0.5000000  -0.3571429   0.0000000), wk =   0.0204082
+        k(   83) = (  -0.4285714   0.5714286   0.0000000), wk =   0.0204082
+        k(   84) = (   0.5714286  -0.1428571   0.0000000), wk =   0.0204082
+        k(   85) = (  -0.2142857   0.4285714   0.0000000), wk =   0.0204082
+        k(   86) = (   0.4285714  -0.2142857   0.0000000), wk =   0.0204082
+        k(   87) = (  -0.2142857   0.5000000   0.0000000), wk =   0.0204082
+        k(   88) = (  -0.2857143   0.5000000   0.0000000), wk =   0.0204082
+        k(   89) = (   0.5000000  -0.2142857   0.0000000), wk =   0.0204082
+        k(   90) = (  -0.2857143  -0.2142857   0.0000000), wk =   0.0204082
+        k(   91) = (   0.5000000  -0.2857143   0.0000000), wk =   0.0204082
+        k(   92) = (  -0.2142857   0.5714286   0.0000000), wk =   0.0204082
+        k(   93) = (  -0.3571429   0.5714286   0.0000000), wk =   0.0204082
+        k(   94) = (   0.5714286  -0.2142857   0.0000000), wk =   0.0204082
+        k(   95) = (  -0.3571429  -0.2142857   0.0000000), wk =   0.0204082
+        k(   96) = (   0.5714286  -0.3571429   0.0000000), wk =   0.0204082
+        k(   97) = (  -0.2857143   0.5714286   0.0000000), wk =   0.0204082
+        k(   98) = (   0.5714286  -0.2857143   0.0000000), wk =   0.0204082
+        k(   99) = (  -0.3571429   0.6428571   0.0000000), wk =   0.0204082
+        k(  100) = (   0.6428571  -0.2857143   0.0000000), wk =   0.0204082
+
+     Dense  grid:   135261 G-vectors     FFT dimensions: (  36,  36, 250)
+
+     Smooth grid:    96835 G-vectors     FFT dimensions: (  32,  32, 225)
+
+     Dynamical RAM for                 wfc:       3.88 MB
+
+     Dynamical RAM for     wfc (w. buffer):       3.88 MB
+
+     Dynamical RAM for           str. fact:       6.19 MB
+
+     Dynamical RAM for           local pot:       0.00 MB
+
+     Dynamical RAM for          nlocal pot:      12.19 MB
+
+     Dynamical RAM for                qrad:       4.82 MB
+
+     Dynamical RAM for          rho,v,vnew:      13.61 MB
+
+     Dynamical RAM for           G-vectors:       8.48 MB
+
+     Dynamical RAM for          h,s,v(r/c):       0.08 MB
+
+     Dynamical RAM for          <psi|beta>:       0.02 MB
+
+     Dynamical RAM for                 psi:       7.75 MB
+
+     Dynamical RAM for                hpsi:       7.75 MB
+
+     Dynamical RAM for      wfcinit/wfcrot:       7.76 MB
+
+     Estimated static dynamical RAM per process >      69.77 MB
+
+     Estimated max dynamical RAM per process >      85.38 MB
+ ----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D
+  The code is running with the 2D cutoff
+  Please refer to:
+  Sohier, T., Calandra, M., & Mauri, F. (2017), 
+  Density functional perturbation theory for gated two-dimensional heterostructures:
+  Theoretical developments and application to flexural phonons in graphene.
+  Physical Review B, 96(7), 75448. https://doi.org/10.1103/PhysRevB.96.075448
+ ----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D
+
+     The potential is recalculated from file :
+     ./tmp/crsi2n4.save/charge-density
+
+     Starting wfcs are   34 randomized atomic wfcs
+
+     Band Structure Calculation
+     Davidson diagonalization with overlap
+
+     Computing kpt #:     1  of   100
+     total cpu time spent up to now is        3.4 secs
+
+     Computing kpt #:     2  of   100
+     total cpu time spent up to now is        5.4 secs
+
+     Computing kpt #:     3  of   100
+     total cpu time spent up to now is        7.3 secs
+
+     Computing kpt #:     4  of   100
+     total cpu time spent up to now is        9.2 secs
+
+     Computing kpt #:     5  of   100
+     total cpu time spent up to now is       11.2 secs
+
+     Computing kpt #:     6  of   100
+     total cpu time spent up to now is       13.1 secs
+
+     Computing kpt #:     7  of   100
+     total cpu time spent up to now is       15.2 secs
+
+     Computing kpt #:     8  of   100
+     total cpu time spent up to now is       17.3 secs
+
+     Computing kpt #:     9  of   100
+     total cpu time spent up to now is       19.3 secs
+
+     Computing kpt #:    10  of   100
+     total cpu time spent up to now is       21.2 secs
+
+     Computing kpt #:    11  of   100
+     total cpu time spent up to now is       23.1 secs
+
+     Computing kpt #:    12  of   100
+     total cpu time spent up to now is       25.1 secs
+
+     Computing kpt #:    13  of   100
+     total cpu time spent up to now is       27.2 secs
+
+     Computing kpt #:    14  of   100
+     total cpu time spent up to now is       29.5 secs
+
+     Computing kpt #:    15  of   100
+     total cpu time spent up to now is       31.4 secs
+
+     Computing kpt #:    16  of   100
+     total cpu time spent up to now is       33.4 secs
+
+     Computing kpt #:    17  of   100
+     total cpu time spent up to now is       35.4 secs
+
+     Computing kpt #:    18  of   100
+     total cpu time spent up to now is       37.6 secs
+
+     Computing kpt #:    19  of   100
+     total cpu time spent up to now is       39.7 secs
+
+     Computing kpt #:    20  of   100
+     total cpu time spent up to now is       41.7 secs
+
+     Computing kpt #:    21  of   100
+     total cpu time spent up to now is       43.7 secs
+
+     Computing kpt #:    22  of   100
+     total cpu time spent up to now is       45.6 secs
+
+     Computing kpt #:    23  of   100
+     total cpu time spent up to now is       47.6 secs
+
+     Computing kpt #:    24  of   100
+     total cpu time spent up to now is       49.4 secs
+
+     Computing kpt #:    25  of   100
+     total cpu time spent up to now is       51.3 secs
+
+     Computing kpt #:    26  of   100
+     total cpu time spent up to now is       53.3 secs
+
+     Computing kpt #:    27  of   100
+     total cpu time spent up to now is       55.2 secs
+
+     Computing kpt #:    28  of   100
+     total cpu time spent up to now is       57.0 secs
+
+     Computing kpt #:    29  of   100
+     total cpu time spent up to now is       58.9 secs
+
+     Computing kpt #:    30  of   100
+     total cpu time spent up to now is       60.8 secs
+
+     Computing kpt #:    31  of   100
+     total cpu time spent up to now is       62.8 secs
+
+     Computing kpt #:    32  of   100
+     total cpu time spent up to now is       64.8 secs
+
+     Computing kpt #:    33  of   100
+     total cpu time spent up to now is       66.8 secs
+
+     Computing kpt #:    34  of   100
+     total cpu time spent up to now is       68.8 secs
+
+     Computing kpt #:    35  of   100
+     total cpu time spent up to now is       71.0 secs
+
+     Computing kpt #:    36  of   100
+     total cpu time spent up to now is       73.2 secs
+
+     Computing kpt #:    37  of   100
+     total cpu time spent up to now is       75.3 secs
+
+     Computing kpt #:    38  of   100
+     total cpu time spent up to now is       77.4 secs
+
+     Computing kpt #:    39  of   100
+     total cpu time spent up to now is       79.4 secs
+
+     Computing kpt #:    40  of   100
+     total cpu time spent up to now is       81.4 secs
+
+     Computing kpt #:    41  of   100
+     total cpu time spent up to now is       83.4 secs
+
+     Computing kpt #:    42  of   100
+     total cpu time spent up to now is       85.4 secs
+
+     Computing kpt #:    43  of   100
+     total cpu time spent up to now is       87.3 secs
+
+     Computing kpt #:    44  of   100
+     total cpu time spent up to now is       89.3 secs
+
+     Computing kpt #:    45  of   100
+     total cpu time spent up to now is       91.3 secs
+
+     Computing kpt #:    46  of   100
+     total cpu time spent up to now is       93.2 secs
+
+     Computing kpt #:    47  of   100
+     total cpu time spent up to now is       95.2 secs
+
+     Computing kpt #:    48  of   100
+     total cpu time spent up to now is       97.1 secs
+
+     Computing kpt #:    49  of   100
+     total cpu time spent up to now is       99.1 secs
+
+     Computing kpt #:    50  of   100
+     total cpu time spent up to now is      101.0 secs
+
+     Computing kpt #:    51  of   100
+     total cpu time spent up to now is      103.1 secs
+
+     Computing kpt #:    52  of   100
+     total cpu time spent up to now is      105.3 secs
+
+     Computing kpt #:    53  of   100
+     total cpu time spent up to now is      107.3 secs
+
+     Computing kpt #:    54  of   100
+     total cpu time spent up to now is      109.3 secs
+
+     Computing kpt #:    55  of   100
+     total cpu time spent up to now is      111.3 secs
+
+     Computing kpt #:    56  of   100
+     total cpu time spent up to now is      113.5 secs
+
+     Computing kpt #:    57  of   100
+     total cpu time spent up to now is      115.7 secs
+
+     Computing kpt #:    58  of   100
+     total cpu time spent up to now is      117.9 secs
+
+     Computing kpt #:    59  of   100
+     total cpu time spent up to now is      120.1 secs
+
+     Computing kpt #:    60  of   100
+     total cpu time spent up to now is      122.3 secs
+
+     Computing kpt #:    61  of   100
+     total cpu time spent up to now is      124.5 secs
+
+     Computing kpt #:    62  of   100
+     total cpu time spent up to now is      126.8 secs
+
+     Computing kpt #:    63  of   100
+     total cpu time spent up to now is      129.2 secs
+
+     Computing kpt #:    64  of   100
+     total cpu time spent up to now is      131.5 secs
+
+     Computing kpt #:    65  of   100
+     total cpu time spent up to now is      133.8 secs
+
+     Computing kpt #:    66  of   100
+     total cpu time spent up to now is      135.7 secs
+
+     Computing kpt #:    67  of   100
+     total cpu time spent up to now is      137.7 secs
+
+     Computing kpt #:    68  of   100
+     total cpu time spent up to now is      139.8 secs
+
+     Computing kpt #:    69  of   100
+     total cpu time spent up to now is      141.8 secs
+
+     Computing kpt #:    70  of   100
+     total cpu time spent up to now is      143.9 secs
+
+     Computing kpt #:    71  of   100
+     total cpu time spent up to now is      146.0 secs
+
+     Computing kpt #:    72  of   100
+     total cpu time spent up to now is      148.0 secs
+
+     Computing kpt #:    73  of   100
+     total cpu time spent up to now is      150.1 secs
+
+     Computing kpt #:    74  of   100
+     total cpu time spent up to now is      152.3 secs
+
+     Computing kpt #:    75  of   100
+     total cpu time spent up to now is      154.5 secs
+
+     Computing kpt #:    76  of   100
+     total cpu time spent up to now is      156.6 secs
+
+     Computing kpt #:    77  of   100
+     total cpu time spent up to now is      158.8 secs
+
+     Computing kpt #:    78  of   100
+     total cpu time spent up to now is      161.1 secs
+
+     Computing kpt #:    79  of   100
+     total cpu time spent up to now is      163.3 secs
+
+     Computing kpt #:    80  of   100
+     total cpu time spent up to now is      165.6 secs
+
+     Computing kpt #:    81  of   100
+     total cpu time spent up to now is      167.9 secs
+
+     Computing kpt #:    82  of   100
+     total cpu time spent up to now is      170.1 secs
+
+     Computing kpt #:    83  of   100
+     total cpu time spent up to now is      172.6 secs
+
+     Computing kpt #:    84  of   100
+     total cpu time spent up to now is      174.9 secs
+
+     Computing kpt #:    85  of   100
+     total cpu time spent up to now is      177.0 secs
+
+     Computing kpt #:    86  of   100
+     total cpu time spent up to now is      179.1 secs
+
+     Computing kpt #:    87  of   100
+     total cpu time spent up to now is      181.3 secs
+
+     Computing kpt #:    88  of   100
+     total cpu time spent up to now is      183.3 secs
+
+     Computing kpt #:    89  of   100
+     total cpu time spent up to now is      185.4 secs
+
+     Computing kpt #:    90  of   100
+     total cpu time spent up to now is      187.4 secs
+
+     Computing kpt #:    91  of   100
+     total cpu time spent up to now is      189.4 secs
+
+     Computing kpt #:    92  of   100
+     total cpu time spent up to now is      191.6 secs
+
+     Computing kpt #:    93  of   100
+     total cpu time spent up to now is      193.7 secs
+
+     Computing kpt #:    94  of   100
+     total cpu time spent up to now is      195.8 secs
+
+     Computing kpt #:    95  of   100
+     total cpu time spent up to now is      197.9 secs
+
+     Computing kpt #:    96  of   100
+     total cpu time spent up to now is      200.0 secs
+
+     Computing kpt #:    97  of   100
+     total cpu time spent up to now is      202.1 secs
+
+     Computing kpt #:    98  of   100
+     total cpu time spent up to now is      204.3 secs
+
+     Computing kpt #:    99  of   100
+     total cpu time spent up to now is      206.5 secs
+
+     Computing kpt #:   100  of   100
+     total cpu time spent up to now is      208.5 secs
+
+     ethr =  2.38E-13,  avg # of iterations = 98.8
+
+     total cpu time spent up to now is      208.5 secs
+
+     End of band structure calculation
+
+          k = 0.0000 0.0000 0.0000 ( 12189 PWs)   bands (ev):
+
+   -77.7616 -48.9807 -48.9807 -48.9034 -24.2585 -24.1684 -21.5557 -20.1537
+   -13.7697 -11.1114  -9.2103  -9.2102  -9.2042  -9.1528  -9.1528  -8.7442
+    -8.7440  -7.4537  -7.4528  -7.3160  -5.2635
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0000 0.0825 0.0000 ( 12167 PWs)   bands (ev):
+
+   -77.7601 -48.9929 -48.9835 -48.9012 -24.1730 -24.0841 -21.4913 -20.1194
+   -13.7028 -11.0810  -9.6624  -9.5713  -9.2899  -9.2400  -9.0530  -8.8999
+    -8.6919  -7.6180  -7.5401  -7.1872  -5.3265
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0000 0.1650 0.0000 ( 12119 PWs)   bands (ev):
+
+   -77.7559 -49.0268 -48.9912 -48.8951 -23.9209 -23.8354 -21.3081 -20.0228
+   -13.5249 -11.0285 -10.5692 -10.5211  -9.5095  -9.4713  -9.3209  -8.8800
+    -8.5335  -7.8769  -7.7664  -7.1830  -5.5544
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0000 0.2474 0.0000 ( 12089 PWs)   bands (ev):
+
+   -77.7498 -49.0755 -49.0024 -48.8863 -23.5166 -23.4363 -21.0373 -19.8847
+   -13.3433 -11.8475 -11.6189 -10.8249  -9.8309  -9.8084  -9.7746  -8.6937
+    -8.2917  -8.2399  -8.0548  -7.3187  -5.8845
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0000 0.3299 0.0000 ( 12083 PWs)   bands (ev):
+
+   -77.7430 -49.1292 -49.0147 -48.8765 -22.9900 -22.9163 -20.7341 -19.7428
+   -13.5981 -13.0674 -12.2570 -10.7776 -10.3211 -10.1147 -10.0772  -8.7230
+    -8.4403  -8.3568  -7.9876  -7.4424  -6.1431
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0000 0.4124 0.0000 ( 12088 PWs)   bands (ev):
+
+   -77.7368 -49.1773 -49.0258 -48.8677 -22.4000 -22.3338 -20.4793 -19.6514
+   -14.4405 -14.1412 -12.2119 -10.9983 -10.5666 -10.3697 -10.3264  -9.0459
+    -8.5926  -8.2523  -7.7073  -7.5029  -6.2315
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0000 0.4949 0.0000 ( 12102 PWs)   bands (ev):
+
+   -77.7326 -49.2104 -49.0335 -48.8616 -21.8688 -21.8102 -20.3548 -19.6517
+   -15.1569 -14.8911 -12.0651 -11.3320 -10.6733 -10.5358 -10.4885  -9.1960
+    -8.7465  -8.0543  -7.5202  -7.4988  -6.2075
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0000-0.5774 0.0000 ( 12078 PWs)   bands (ev):
+
+   -77.7311 -49.2222 -49.0363 -48.8594 -21.6317 -21.5760 -20.3428 -19.6835
+   -15.4280 -15.1626 -11.9908 -11.4852 -10.7252 -10.5933 -10.5445  -9.2269
+    -8.7997  -7.9564  -7.5244  -7.4211  -6.1845
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0714 0.1237 0.0000 ( 12139 PWs)   bands (ev):
+
+   -77.7572 -49.0154 -48.9892 -48.8971 -24.0042 -23.9176 -21.3675 -20.0538
+   -13.5797 -11.0327 -10.2646 -10.2197  -9.5102  -9.4552  -9.1289  -8.9241
+    -8.6018  -7.7707  -7.7383  -7.1419  -5.4757
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0714 0.2062 0.0000 ( 12100 PWs)   bands (ev):
+
+   -77.7521 -49.0555 -48.9998 -48.8896 -23.6756 -23.5933 -21.1401 -19.9359
+   -13.3893 -11.3582 -11.1818 -10.8329  -9.9336  -9.7942  -9.4798  -8.7575
+    -8.4185  -8.1764  -7.8846  -7.2205  -5.7634
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0714 0.2887 0.0000 ( 12076 PWs)   bands (ev):
+
+   -77.7456 -49.1052 -49.0131 -48.8803 -23.2088 -23.1323 -20.8515 -19.7941
+   -13.3640 -12.4965 -12.0413 -10.7716 -10.3672 -10.1732  -9.8949  -8.7021
+    -8.5406  -8.1732  -8.0365  -7.3811  -6.0614
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0714 0.3712 0.0000 ( 12084 PWs)   bands (ev):
+
+   -77.7391 -49.1545 -49.0264 -48.8710 -22.6456 -22.5761 -20.5695 -19.6743
+   -13.9858 -13.6184 -12.2370 -10.9178 -10.6100 -10.4686 -10.2834  -9.0972
+    -8.4321  -8.2127  -7.9183  -7.4757  -6.2227
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0714 0.4536 0.0000 ( 12112 PWs)   bands (ev):
+
+   -77.7339 -49.1939 -49.0371 -48.8636 -22.0703 -22.0085 -20.3799 -19.6297
+   -14.7979 -14.5224 -12.1062 -11.2429 -10.7960 -10.6127 -10.5523  -9.2936
+    -8.5922  -8.1037  -7.7553  -7.4637  -6.2224
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0714 0.5361 0.0000 ( 12095 PWs)   bands (ev):
+
+   -77.7311 -49.2156 -49.0430 -48.8594 -21.6565 -21.6003 -20.3284 -19.6618
+   -15.3000 -15.0346 -11.9858 -11.4739 -10.8991 -10.7974 -10.6361  -9.2989
+    -8.7683  -7.9570  -7.6673  -7.4313  -6.1678
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.1429 0.2474 0.0000 ( 12100 PWs)   bands (ev):
+
+   -77.7465 -49.0945 -49.0148 -48.8817 -23.2836 -23.2062 -20.8938 -19.8130
+   -13.3080 -12.2010 -11.8405 -10.7647 -10.5567 -10.3228  -9.7665  -8.7331
+    -8.5747  -8.2601  -7.8900  -7.3355  -6.0259
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.1429 0.3299 0.0000 ( 12089 PWs)   bands (ev):
+
+   -77.7404 -49.1362 -49.0325 -48.8729 -22.7756 -22.7044 -20.6227 -19.6890
+   -13.6407 -13.1476 -12.1478 -11.1345 -10.9609 -10.5575 -10.1179  -9.2332
+    -8.4294  -8.1842  -7.8649  -7.5041  -6.2184
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.1429 0.4124 0.0000 ( 12104 PWs)   bands (ev):
+
+   -77.7349 -49.1732 -49.0489 -48.8649 -22.2113 -22.1472 -20.4013 -19.6122
+   -14.3467 -14.0361 -12.1019 -11.5505 -11.3384 -10.5748 -10.4382  -9.5389
+    -8.3821  -8.2245  -7.9208  -7.4836  -6.2442
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.1429 0.4949 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7311 -49.1985 -49.0604 -48.8594 -21.7096 -21.6521 -20.2997 -19.6160
+   -14.9551 -14.6829 -12.0776 -11.7856 -11.4392 -10.8763 -10.6067  -9.5094
+    -8.6331  -8.2105  -7.8704  -7.3825  -6.1530
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.1429 0.5774 0.0000 ( 12090 PWs)   bands (ev):
+
+   -77.7297 -49.2075 -49.0645 -48.8575 -21.4886 -21.4327 -20.2935 -19.6445
+   -15.1903 -14.9217 -12.1013 -11.8619 -11.3325 -11.1132 -10.6844  -9.3970
+    -8.8180  -8.1994  -7.8150  -7.3417  -6.0938
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2143 0.3712 0.0000 ( 12098 PWs)   bands (ev):
+
+   -77.7352 -49.1626 -49.0564 -48.8654 -22.2616 -22.1966 -20.4101 -19.6060
+   -14.1051 -13.7529 -12.0657 -11.8014 -11.7197 -10.4823 -10.3324  -9.6742
+    -8.4389  -8.2818  -7.8002  -7.5645  -6.2560
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2143 0.4536 0.0000 ( 12119 PWs)   bands (ev):
+
+   -77.7311 -49.1807 -49.0785 -48.8594 -21.7497 -21.6911 -20.2796 -19.5818
+   -14.5695 -14.2693 -12.4742 -12.3123 -11.6979 -10.6288 -10.5166  -9.7294
+    -8.7344  -8.3863  -7.8738  -7.3891  -6.1507
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2143 0.5361 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7288 -49.1895 -49.0919 -48.8561 -21.3938 -21.3374 -20.2544 -19.6094
+   -14.8708 -14.5870 -12.7520 -12.6112 -11.4185 -10.8904 -10.7077  -9.4909
+    -9.0166  -8.6019  -7.8062  -7.2692  -6.0217
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2857 0.4949 0.0000 ( 12084 PWs)   bands (ev):
+
+   -77.7284 -49.1769 -49.1079 -48.8556 -21.3654 -21.3088 -20.2363 -19.5911
+   -14.6243 -14.3073 -13.1737 -13.0525 -11.4254 -10.7975 -10.5313  -9.6600
+    -9.2231  -8.6359  -7.8121  -7.2492  -5.9899
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2857 0.5774 0.0000 ( 12096 PWs)   bands (ev):
+
+   -77.7275 -49.1709 -49.1231 -48.8543 -21.2075 -21.1480 -20.2396 -19.6061
+   -14.5975 -14.2578 -13.4720 -13.3931 -11.2444 -10.8988 -10.5045  -9.7788
+    -9.2095  -8.8662  -7.7708  -7.1897  -5.9000
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.0714 0.0412 0.0000 ( 12167 PWs)   bands (ev):
+
+   -77.7601 -48.9929 -48.9835 -48.9012 -24.1730 -24.0841 -21.4913 -20.1194
+   -13.7028 -11.0810  -9.6624  -9.5713  -9.2898  -9.2400  -9.0530  -8.9001
+    -8.6918  -7.6174  -7.5408  -7.1873  -5.3265
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.0714 0.0412 0.0000 ( 12167 PWs)   bands (ev):
+
+   -77.7601 -48.9929 -48.9835 -48.9012 -24.1730 -24.0841 -21.4913 -20.1194
+   -13.7028 -11.0810  -9.6624  -9.5713  -9.2899  -9.2400  -9.0530  -8.8999
+    -8.6919  -7.6180  -7.5401  -7.1872  -5.3265
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.1429 0.0825 0.0000 ( 12119 PWs)   bands (ev):
+
+   -77.7559 -49.0268 -48.9912 -48.8951 -23.9209 -23.8354 -21.3082 -20.0228
+   -13.5249 -11.0285 -10.5693 -10.5211  -9.5094  -9.4713  -9.3211  -8.8800
+    -8.5333  -7.8763  -7.7669  -7.1831  -5.5543
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.1429 0.0825 0.0000 ( 12119 PWs)   bands (ev):
+
+   -77.7559 -49.0268 -48.9912 -48.8951 -23.9209 -23.8354 -21.3081 -20.0228
+   -13.5249 -11.0285 -10.5692 -10.5211  -9.5095  -9.4713  -9.3209  -8.8800
+    -8.5335  -7.8769  -7.7664  -7.1830  -5.5544
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2143 0.1237 0.0000 ( 12089 PWs)   bands (ev):
+
+   -77.7498 -49.0755 -49.0024 -48.8863 -23.5166 -23.4363 -21.0374 -19.8846
+   -13.3433 -11.8475 -11.6189 -10.8248  -9.8310  -9.8083  -9.7746  -8.6937
+    -8.2917  -8.2396  -8.0551  -7.3189  -5.8843
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2143 0.1237 0.0000 ( 12089 PWs)   bands (ev):
+
+   -77.7498 -49.0755 -49.0024 -48.8863 -23.5166 -23.4363 -21.0373 -19.8847
+   -13.3433 -11.8475 -11.6189 -10.8249  -9.8309  -9.8084  -9.7746  -8.6937
+    -8.2917  -8.2399  -8.0548  -7.3187  -5.8845
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2857 0.1650 0.0000 ( 12083 PWs)   bands (ev):
+
+   -77.7430 -49.1292 -49.0147 -48.8765 -22.9900 -22.9163 -20.7342 -19.7428
+   -13.5982 -13.0674 -12.2570 -10.7775 -10.3211 -10.1146 -10.0772  -8.7229
+    -8.4403  -8.3572  -7.9876  -7.4426  -6.1429
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2857 0.1650 0.0000 ( 12083 PWs)   bands (ev):
+
+   -77.7430 -49.1292 -49.0147 -48.8765 -22.9900 -22.9163 -20.7341 -19.7428
+   -13.5981 -13.0674 -12.2570 -10.7776 -10.3211 -10.1147 -10.0772  -8.7230
+    -8.4403  -8.3568  -7.9876  -7.4425  -6.1431
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.3571 0.2062 0.0000 ( 12088 PWs)   bands (ev):
+
+   -77.7368 -49.1773 -49.0258 -48.8677 -22.4000 -22.3338 -20.4794 -19.6513
+   -14.4406 -14.1412 -12.2120 -10.9984 -10.5664 -10.3696 -10.3265  -9.0459
+    -8.5929  -8.2522  -7.7073  -7.5031  -6.2312
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.3571 0.2062 0.0000 ( 12088 PWs)   bands (ev):
+
+   -77.7368 -49.1773 -49.0258 -48.8677 -22.4000 -22.3338 -20.4793 -19.6514
+   -14.4405 -14.1412 -12.2119 -10.9983 -10.5666 -10.3697 -10.3265  -9.0459
+    -8.5926  -8.2523  -7.7073  -7.5030  -6.2315
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.4286 0.2474 0.0000 ( 12102 PWs)   bands (ev):
+
+   -77.7326 -49.2104 -49.0335 -48.8616 -21.8688 -21.8102 -20.3549 -19.6516
+   -15.1570 -14.8911 -12.0654 -11.3320 -10.6733 -10.5358 -10.4885  -9.1959
+    -8.7468  -8.0542  -7.5205  -7.4988  -6.2072
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.4286 0.2474 0.0000 ( 12102 PWs)   bands (ev):
+
+   -77.7326 -49.2104 -49.0335 -48.8616 -21.8688 -21.8102 -20.3548 -19.6516
+   -15.1569 -14.8911 -12.0651 -11.3320 -10.6734 -10.5358 -10.4885  -9.1960
+    -8.7465  -8.0543  -7.5202  -7.4988  -6.2075
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.5000-0.2887 0.0000 ( 12078 PWs)   bands (ev):
+
+   -77.7311 -49.2222 -49.0362 -48.8594 -21.6318 -21.5760 -20.3429 -19.6834
+   -15.4280 -15.1625 -11.9911 -11.4851 -10.7251 -10.5932 -10.5445  -9.2267
+    -8.7999  -7.9563  -7.5247  -7.4212  -6.1842
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.5000-0.2887 0.0000 ( 12078 PWs)   bands (ev):
+
+   -77.7311 -49.2222 -49.0363 -48.8594 -21.6317 -21.5760 -20.3428 -19.6834
+   -15.4280 -15.1626 -11.9908 -11.4852 -10.7252 -10.5933 -10.5445  -9.2269
+    -8.7997  -7.9564  -7.5244  -7.4211  -6.1845
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.0714 0.1237 0.0000 ( 12139 PWs)   bands (ev):
+
+   -77.7572 -49.0154 -48.9892 -48.8971 -24.0042 -23.9176 -21.3675 -20.0538
+   -13.5797 -11.0326 -10.2647 -10.2197  -9.5102  -9.4552  -9.1290  -8.9241
+    -8.6016  -7.7709  -7.7380  -7.1421  -5.4757
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.1429 0.0000 0.0000 ( 12139 PWs)   bands (ev):
+
+   -77.7572 -49.0154 -48.9892 -48.8971 -24.0042 -23.9176 -21.3675 -20.0538
+   -13.5797 -11.0326 -10.2647 -10.2197  -9.5102  -9.4552  -9.1290  -8.9241
+    -8.6016  -7.7709  -7.7380  -7.1421  -5.4757
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.0714 0.2062 0.0000 ( 12100 PWs)   bands (ev):
+
+   -77.7521 -49.0555 -48.9998 -48.8896 -23.6756 -23.5933 -21.1401 -19.9359
+   -13.3893 -11.3582 -11.1818 -10.8328  -9.9336  -9.7942  -9.4799  -8.7575
+    -8.4185  -8.1767  -7.8841  -7.2208  -5.7633
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.1429 0.1650 0.0000 ( 12100 PWs)   bands (ev):
+
+   -77.7521 -49.0556 -48.9998 -48.8896 -23.6756 -23.5933 -21.1401 -19.9359
+   -13.3893 -11.3582 -11.1818 -10.8328  -9.9336  -9.7942  -9.4799  -8.7575
+    -8.4184  -8.1765  -7.8843  -7.2209  -5.7632
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2143 0.0412 0.0000 ( 12100 PWs)   bands (ev):
+
+   -77.7521 -49.0555 -48.9998 -48.8896 -23.6756 -23.5933 -21.1401 -19.9359
+   -13.3893 -11.3582 -11.1818 -10.8328  -9.9336  -9.7942  -9.4799  -8.7575
+    -8.4185  -8.1767  -7.8841  -7.2208  -5.7633
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.1429-0.1650 0.0000 ( 12100 PWs)   bands (ev):
+
+   -77.7521 -49.0555 -48.9998 -48.8896 -23.6756 -23.5933 -21.1401 -19.9359
+   -13.3893 -11.3582 -11.1818 -10.8329  -9.9336  -9.7942  -9.4798  -8.7575
+    -8.4185  -8.1764  -7.8846  -7.2205  -5.7634
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2143-0.0412 0.0000 ( 12100 PWs)   bands (ev):
+
+   -77.7521 -49.0556 -48.9998 -48.8896 -23.6756 -23.5933 -21.1401 -19.9359
+   -13.3893 -11.3582 -11.1818 -10.8328  -9.9336  -9.7942  -9.4799  -8.7575
+    -8.4184  -8.1765  -7.8843  -7.2209  -5.7632
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.0714 0.2887 0.0000 ( 12076 PWs)   bands (ev):
+
+   -77.7456 -49.1052 -49.0131 -48.8803 -23.2088 -23.1323 -20.8516 -19.7941
+   -13.3640 -12.4965 -12.0413 -10.7715 -10.3672 -10.1732  -9.8949  -8.7023
+    -8.5406  -8.1731  -8.0363  -7.3813  -6.0613
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2143 0.2062 0.0000 ( 12076 PWs)   bands (ev):
+
+   -77.7456 -49.1052 -49.0131 -48.8803 -23.2088 -23.1323 -20.8516 -19.7941
+   -13.3641 -12.4965 -12.0413 -10.7715 -10.3672 -10.1731  -9.8950  -8.7023
+    -8.5406  -8.1731  -8.0365  -7.3814  -6.0611
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2857 0.0825 0.0000 ( 12076 PWs)   bands (ev):
+
+   -77.7456 -49.1052 -49.0131 -48.8803 -23.2088 -23.1323 -20.8516 -19.7941
+   -13.3640 -12.4965 -12.0413 -10.7715 -10.3672 -10.1732  -9.8949  -8.7023
+    -8.5406  -8.1731  -8.0363  -7.3813  -6.0613
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2143-0.2062 0.0000 ( 12076 PWs)   bands (ev):
+
+   -77.7456 -49.1052 -49.0131 -48.8803 -23.2088 -23.1323 -20.8515 -19.7941
+   -13.3640 -12.4965 -12.0413 -10.7716 -10.3672 -10.1732  -9.8949  -8.7022
+    -8.5406  -8.1732  -8.0365  -7.3811  -6.0614
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2857-0.0825 0.0000 ( 12076 PWs)   bands (ev):
+
+   -77.7456 -49.1052 -49.0131 -48.8803 -23.2088 -23.1323 -20.8516 -19.7941
+   -13.3641 -12.4965 -12.0413 -10.7715 -10.3672 -10.1731  -9.8950  -8.7023
+    -8.5406  -8.1731  -8.0365  -7.3814  -6.0611
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.0714 0.3712 0.0000 ( 12084 PWs)   bands (ev):
+
+   -77.7391 -49.1545 -49.0264 -48.8710 -22.6456 -22.5761 -20.5695 -19.6743
+   -13.9858 -13.6184 -12.2370 -10.9178 -10.6100 -10.4686 -10.2834  -9.0971
+    -8.4321  -8.2127  -7.9184  -7.4758  -6.2225
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2857 0.2474 0.0000 ( 12084 PWs)   bands (ev):
+
+   -77.7391 -49.1545 -49.0264 -48.8710 -22.6456 -22.5761 -20.5696 -19.6743
+   -13.9858 -13.6183 -12.2370 -10.9178 -10.6100 -10.4685 -10.2834  -9.0973
+    -8.4322  -8.2127  -7.9183  -7.4759  -6.2223
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.3571 0.1237 0.0000 ( 12084 PWs)   bands (ev):
+
+   -77.7391 -49.1545 -49.0264 -48.8710 -22.6456 -22.5761 -20.5695 -19.6743
+   -13.9858 -13.6184 -12.2370 -10.9178 -10.6100 -10.4686 -10.2834  -9.0971
+    -8.4321  -8.2127  -7.9184  -7.4758  -6.2225
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2857-0.2474 0.0000 ( 12084 PWs)   bands (ev):
+
+   -77.7391 -49.1545 -49.0264 -48.8710 -22.6456 -22.5761 -20.5695 -19.6743
+   -13.9858 -13.6184 -12.2370 -10.9178 -10.6100 -10.4686 -10.2834  -9.0973
+    -8.4321  -8.2126  -7.9183  -7.4757  -6.2227
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.3571-0.1237 0.0000 ( 12084 PWs)   bands (ev):
+
+   -77.7391 -49.1545 -49.0264 -48.8710 -22.6456 -22.5761 -20.5696 -19.6743
+   -13.9858 -13.6183 -12.2370 -10.9178 -10.6100 -10.4685 -10.2834  -9.0973
+    -8.4322  -8.2127  -7.9183  -7.4759  -6.2223
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.0714 0.4536 0.0000 ( 12112 PWs)   bands (ev):
+
+   -77.7339 -49.1939 -49.0371 -48.8636 -22.0703 -22.0085 -20.3799 -19.6297
+   -14.7979 -14.5224 -12.1062 -11.2429 -10.7960 -10.6127 -10.5524  -9.2933
+    -8.5925  -8.1037  -7.7553  -7.4636  -6.2223
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.3571 0.2887 0.0000 ( 12112 PWs)   bands (ev):
+
+   -77.7339 -49.1939 -49.0371 -48.8636 -22.0704 -22.0085 -20.3799 -19.6297
+   -14.7980 -14.5224 -12.1063 -11.2429 -10.7960 -10.6127 -10.5522  -9.2935
+    -8.5925  -8.1036  -7.7553  -7.4638  -6.2221
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.4286 0.1650 0.0000 ( 12112 PWs)   bands (ev):
+
+   -77.7339 -49.1938 -49.0371 -48.8636 -22.0703 -22.0085 -20.3799 -19.6297
+   -14.7979 -14.5224 -12.1062 -11.2429 -10.7960 -10.6127 -10.5524  -9.2933
+    -8.5925  -8.1037  -7.7553  -7.4636  -6.2223
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.3571-0.2887 0.0000 ( 12112 PWs)   bands (ev):
+
+   -77.7339 -49.1938 -49.0371 -48.8636 -22.0703 -22.0085 -20.3798 -19.6297
+   -14.7979 -14.5224 -12.1062 -11.2429 -10.7960 -10.6127 -10.5523  -9.2936
+    -8.5922  -8.1037  -7.7553  -7.4637  -6.2224
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.4286-0.1650 0.0000 ( 12112 PWs)   bands (ev):
+
+   -77.7339 -49.1939 -49.0371 -48.8636 -22.0704 -22.0085 -20.3799 -19.6297
+   -14.7980 -14.5224 -12.1063 -11.2429 -10.7960 -10.6127 -10.5522  -9.2935
+    -8.5925  -8.1036  -7.7553  -7.4638  -6.2221
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.0714 0.5361 0.0000 ( 12095 PWs)   bands (ev):
+
+   -77.7311 -49.2156 -49.0430 -48.8594 -21.6565 -21.6003 -20.3284 -19.6618
+   -15.3000 -15.0346 -11.9858 -11.4739 -10.8991 -10.7974 -10.6362  -9.2987
+    -8.7685  -7.9571  -7.6673  -7.4313  -6.1678
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.4286 0.3299 0.0000 ( 12095 PWs)   bands (ev):
+
+   -77.7311 -49.2156 -49.0430 -48.8594 -21.6566 -21.6003 -20.3285 -19.6617
+   -15.3001 -15.0345 -11.9861 -11.4738 -10.8990 -10.7974 -10.6361  -9.2988
+    -8.7685  -7.9570  -7.6674  -7.4315  -6.1675
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.5000 0.2062 0.0000 ( 12095 PWs)   bands (ev):
+
+   -77.7311 -49.2156 -49.0430 -48.8594 -21.6565 -21.6003 -20.3284 -19.6618
+   -15.3001 -15.0346 -11.9859 -11.4739 -10.8991 -10.7974 -10.6362  -9.2987
+    -8.7685  -7.9570  -7.6673  -7.4313  -6.1678
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.4286-0.3299 0.0000 ( 12095 PWs)   bands (ev):
+
+   -77.7311 -49.2156 -49.0430 -48.8594 -21.6565 -21.6003 -20.3284 -19.6618
+   -15.3001 -15.0346 -11.9859 -11.4739 -10.8991 -10.7974 -10.6361  -9.2989
+    -8.7683  -7.9570  -7.6673  -7.4313  -6.1678
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.5000-0.2062 0.0000 ( 12095 PWs)   bands (ev):
+
+   -77.7311 -49.2156 -49.0430 -48.8594 -21.6566 -21.6003 -20.3285 -19.6617
+   -15.3001 -15.0345 -11.9861 -11.4738 -10.8990 -10.7974 -10.6361  -9.2988
+    -8.7685  -7.9570  -7.6674  -7.4315  -6.1675
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.1429 0.2474 0.0000 ( 12100 PWs)   bands (ev):
+
+   -77.7465 -49.0945 -49.0147 -48.8817 -23.2836 -23.2062 -20.8938 -19.8129
+   -13.3080 -12.2010 -11.8405 -10.7646 -10.5567 -10.3228  -9.7666  -8.7333
+    -8.5747  -8.2600  -7.8896  -7.3360  -6.0256
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.2857 0.0000 0.0000 ( 12100 PWs)   bands (ev):
+
+   -77.7465 -49.0945 -49.0147 -48.8817 -23.2836 -23.2062 -20.8938 -19.8129
+   -13.3080 -12.2010 -11.8405 -10.7646 -10.5567 -10.3228  -9.7666  -8.7333
+    -8.5747  -8.2600  -7.8896  -7.3360  -6.0256
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.1429 0.3299 0.0000 ( 12089 PWs)   bands (ev):
+
+   -77.7404 -49.1362 -49.0325 -48.8729 -22.7756 -22.7044 -20.6227 -19.6890
+   -13.6408 -13.1476 -12.1478 -11.1345 -10.9609 -10.5574 -10.1180  -9.2333
+    -8.4294  -8.1841  -7.8648  -7.5044  -6.2182
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2143 0.2887 0.0000 ( 12089 PWs)   bands (ev):
+
+   -77.7404 -49.1362 -49.0325 -48.8729 -22.7756 -22.7043 -20.6227 -19.6890
+   -13.6408 -13.1476 -12.1478 -11.1345 -10.9609 -10.5573 -10.1181  -9.2334
+    -8.4294  -8.1840  -7.8648  -7.5045  -6.2182
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.3571 0.0412 0.0000 ( 12089 PWs)   bands (ev):
+
+   -77.7404 -49.1362 -49.0325 -48.8729 -22.7756 -22.7044 -20.6227 -19.6890
+   -13.6408 -13.1476 -12.1478 -11.1345 -10.9609 -10.5574 -10.1180  -9.2333
+    -8.4294  -8.1841  -7.8648  -7.5044  -6.2182
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2143-0.2887 0.0000 ( 12089 PWs)   bands (ev):
+
+   -77.7404 -49.1362 -49.0325 -48.8729 -22.7756 -22.7044 -20.6227 -19.6890
+   -13.6407 -13.1476 -12.1478 -11.1345 -10.9609 -10.5575 -10.1179  -9.2333
+    -8.4294  -8.1842  -7.8649  -7.5041  -6.2184
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.3571-0.0412 0.0000 ( 12089 PWs)   bands (ev):
+
+   -77.7404 -49.1362 -49.0325 -48.8729 -22.7756 -22.7043 -20.6227 -19.6889
+   -13.6408 -13.1476 -12.1478 -11.1345 -10.9609 -10.5573 -10.1181  -9.2334
+    -8.4294  -8.1840  -7.8648  -7.5045  -6.2182
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.1429 0.4124 0.0000 ( 12104 PWs)   bands (ev):
+
+   -77.7349 -49.1732 -49.0489 -48.8649 -22.2113 -22.1472 -20.4013 -19.6122
+   -14.3467 -14.0361 -12.1019 -11.5505 -11.3384 -10.5749 -10.4383  -9.5387
+    -8.3823  -8.2245  -7.9211  -7.4835  -6.2440
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2857 0.3299 0.0000 ( 12104 PWs)   bands (ev):
+
+   -77.7349 -49.1732 -49.0489 -48.8649 -22.2113 -22.1472 -20.4014 -19.6122
+   -14.3467 -14.0360 -12.1020 -11.5505 -11.3384 -10.5748 -10.4383  -9.5389
+    -8.3822  -8.2244  -7.9210  -7.4837  -6.2440
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.4286 0.0825 0.0000 ( 12104 PWs)   bands (ev):
+
+   -77.7349 -49.1732 -49.0489 -48.8649 -22.2113 -22.1472 -20.4013 -19.6122
+   -14.3467 -14.0361 -12.1019 -11.5505 -11.3384 -10.5749 -10.4383  -9.5387
+    -8.3823  -8.2245  -7.9211  -7.4835  -6.2440
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2857-0.3299 0.0000 ( 12104 PWs)   bands (ev):
+
+   -77.7349 -49.1732 -49.0489 -48.8649 -22.2113 -22.1472 -20.4013 -19.6122
+   -14.3467 -14.0361 -12.1019 -11.5505 -11.3384 -10.5748 -10.4382  -9.5390
+    -8.3821  -8.2245  -7.9208  -7.4836  -6.2443
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.4286-0.0825 0.0000 ( 12104 PWs)   bands (ev):
+
+   -77.7349 -49.1732 -49.0489 -48.8649 -22.2113 -22.1472 -20.4014 -19.6122
+   -14.3467 -14.0360 -12.1020 -11.5505 -11.3384 -10.5749 -10.4382  -9.5389
+    -8.3822  -8.2245  -7.9210  -7.4837  -6.2440
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.1429 0.4949 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7311 -49.1985 -49.0604 -48.8594 -21.7096 -21.6521 -20.2997 -19.6159
+   -14.9551 -14.6829 -12.0776 -11.7856 -11.4391 -10.8764 -10.6069  -9.5090
+    -8.6334  -8.2105  -7.8705  -7.3824  -6.1528
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.3571 0.3712 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7311 -49.1985 -49.0604 -48.8594 -21.7096 -21.6520 -20.2997 -19.6159
+   -14.9551 -14.6829 -12.0777 -11.7856 -11.4392 -10.8764 -10.6068  -9.5093
+    -8.6333  -8.2104  -7.8705  -7.3826  -6.1527
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.5000 0.1237 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7311 -49.1985 -49.0604 -48.8594 -21.7096 -21.6521 -20.2997 -19.6159
+   -14.9551 -14.6829 -12.0776 -11.7856 -11.4392 -10.8763 -10.6069  -9.5090
+    -8.6334  -8.2105  -7.8705  -7.3824  -6.1528
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.3571-0.3712 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7311 -49.1985 -49.0604 -48.8594 -21.7096 -21.6521 -20.2997 -19.6160
+   -14.9551 -14.6829 -12.0776 -11.7856 -11.4392 -10.8763 -10.6067  -9.5094
+    -8.6331  -8.2105  -7.8704  -7.3825  -6.1530
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.5000-0.1237 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7311 -49.1985 -49.0604 -48.8594 -21.7096 -21.6520 -20.2997 -19.6159
+   -14.9551 -14.6829 -12.0777 -11.7856 -11.4392 -10.8764 -10.6068  -9.5093
+    -8.6333  -8.2104  -7.8705  -7.3826  -6.1527
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.4286 0.4124 0.0000 ( 12090 PWs)   bands (ev):
+
+   -77.7297 -49.2075 -49.0645 -48.8575 -21.4886 -21.4327 -20.2936 -19.6444
+   -15.1903 -14.9217 -12.1014 -11.8619 -11.3326 -11.1132 -10.6844  -9.3971
+    -8.8179  -8.1993  -7.8151  -7.3418  -6.0936
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.5714 0.1650 0.0000 ( 12090 PWs)   bands (ev):
+
+   -77.7297 -49.2075 -49.0645 -48.8575 -21.4886 -21.4327 -20.2935 -19.6444
+   -15.1903 -14.9217 -12.1013 -11.8619 -11.3325 -11.1132 -10.6844  -9.3970
+    -8.8180  -8.1994  -7.8150  -7.3417  -6.0938
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2143 0.3712 0.0000 ( 12098 PWs)   bands (ev):
+
+   -77.7352 -49.1626 -49.0563 -48.8654 -22.2616 -22.1966 -20.4101 -19.6059
+   -14.1051 -13.7528 -12.0657 -11.8014 -11.7197 -10.4824 -10.3325  -9.6741
+    -8.4388  -8.2818  -7.8007  -7.5644  -6.2557
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.4286 0.0000 0.0000 ( 12098 PWs)   bands (ev):
+
+   -77.7352 -49.1626 -49.0563 -48.8654 -22.2616 -22.1966 -20.4101 -19.6059
+   -14.1051 -13.7529 -12.0657 -11.8014 -11.7197 -10.4824 -10.3325  -9.6741
+    -8.4388  -8.2818  -7.8006  -7.5644  -6.2557
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2143 0.4536 0.0000 ( 12119 PWs)   bands (ev):
+
+   -77.7311 -49.1807 -49.0784 -48.8594 -21.7497 -21.6910 -20.2797 -19.5817
+   -14.5696 -14.2693 -12.4742 -12.3123 -11.6979 -10.6290 -10.5167  -9.7291
+    -8.7344  -8.3865  -7.8741  -7.3890  -6.1506
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2857 0.4124 0.0000 ( 12119 PWs)   bands (ev):
+
+   -77.7311 -49.1807 -49.0784 -48.8594 -21.7497 -21.6910 -20.2797 -19.5817
+   -14.5696 -14.2692 -12.4742 -12.3123 -11.6979 -10.6290 -10.5167  -9.7292
+    -8.7343  -8.3864  -7.8741  -7.3891  -6.1506
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.5000 0.0412 0.0000 ( 12119 PWs)   bands (ev):
+
+   -77.7311 -49.1807 -49.0784 -48.8594 -21.7497 -21.6910 -20.2797 -19.5817
+   -14.5696 -14.2693 -12.4742 -12.3123 -11.6979 -10.6290 -10.5167  -9.7291
+    -8.7344  -8.3865  -7.8741  -7.3890  -6.1506
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2857-0.4124 0.0000 ( 12119 PWs)   bands (ev):
+
+   -77.7311 -49.1807 -49.0785 -48.8594 -21.7497 -21.6911 -20.2796 -19.5818
+   -14.5695 -14.2693 -12.4742 -12.3123 -11.6979 -10.6287 -10.5166  -9.7295
+    -8.7344  -8.3862  -7.8738  -7.3891  -6.1507
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.5000-0.0412 0.0000 ( 12119 PWs)   bands (ev):
+
+   -77.7311 -49.1807 -49.0784 -48.8594 -21.7497 -21.6910 -20.2797 -19.5817
+   -14.5696 -14.2693 -12.4742 -12.3123 -11.6979 -10.6290 -10.5167  -9.7292
+    -8.7343  -8.3864  -7.8741  -7.3891  -6.1506
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2143 0.5361 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7288 -49.1895 -49.0919 -48.8561 -21.3938 -21.3374 -20.2544 -19.6093
+   -14.8708 -14.5870 -12.7520 -12.6112 -11.4185 -10.8904 -10.7078  -9.4907
+    -9.0166  -8.6021  -7.8062  -7.2691  -6.0216
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.3571 0.4536 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7288 -49.1895 -49.0919 -48.8561 -21.3938 -21.3374 -20.2545 -19.6093
+   -14.8709 -14.5870 -12.7520 -12.6112 -11.4186 -10.8904 -10.7078  -9.4908
+    -9.0165  -8.6020  -7.8063  -7.2692  -6.0216
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.5714 0.0825 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7288 -49.1895 -49.0919 -48.8561 -21.3938 -21.3374 -20.2544 -19.6093
+   -14.8708 -14.5870 -12.7520 -12.6112 -11.4185 -10.8904 -10.7078  -9.4907
+    -9.0166  -8.6021  -7.8062  -7.2691  -6.0216
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.3571-0.4536 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7288 -49.1895 -49.0919 -48.8561 -21.3938 -21.3374 -20.2544 -19.6093
+   -14.8708 -14.5870 -12.7520 -12.6112 -11.4185 -10.8903 -10.7077  -9.4909
+    -9.0166  -8.6019  -7.8062  -7.2692  -6.0217
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.5714-0.0825 0.0000 ( 12103 PWs)   bands (ev):
+
+   -77.7288 -49.1895 -49.0919 -48.8561 -21.3938 -21.3374 -20.2545 -19.6093
+   -14.8709 -14.5870 -12.7520 -12.6112 -11.4186 -10.8904 -10.7078  -9.4908
+    -9.0165  -8.6020  -7.8063  -7.2692  -6.0216
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.2857 0.4949 0.0000 ( 12084 PWs)   bands (ev):
+
+   -77.7284 -49.1769 -49.1079 -48.8556 -21.3654 -21.3088 -20.2363 -19.5911
+   -14.6243 -14.3073 -13.1737 -13.0525 -11.4254 -10.7976 -10.5314  -9.6598
+    -9.2228  -8.6361  -7.8123  -7.2492  -5.9898
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.5714 0.0000 0.0000 ( 12084 PWs)   bands (ev):
+
+   -77.7284 -49.1769 -49.1079 -48.8556 -21.3654 -21.3088 -20.2363 -19.5911
+   -14.6243 -14.3073 -13.1737 -13.0525 -11.4254 -10.7976 -10.5314  -9.6598
+    -9.2228  -8.6361  -7.8122  -7.2492  -5.9898
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k =-0.3571 0.5361 0.0000 ( 12096 PWs)   bands (ev):
+
+   -77.7275 -49.1709 -49.1231 -48.8543 -21.2075 -21.1480 -20.2396 -19.6061
+   -14.5975 -14.2578 -13.4720 -13.3931 -11.2445 -10.8989 -10.5046  -9.7788
+    -9.2094  -8.8663  -7.7709  -7.1897  -5.9000
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+          k = 0.6429 0.0412 0.0000 ( 12096 PWs)   bands (ev):
+
+   -77.7275 -49.1709 -49.1231 -48.8543 -21.2075 -21.1480 -20.2396 -19.6061
+   -14.5975 -14.2579 -13.4720 -13.3931 -11.2444 -10.8989 -10.5045  -9.7788
+    -9.2095  -8.8662  -7.7708  -7.1897  -5.9000
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000
+
+     highest occupied level (ev):    -5.2635
+
+     Writing all to output data dir ./tmp/crsi2n4.save/ :
+     XML data file, pseudopotentials, collected wavefunctions
+ 
+     init_run     :      1.18s CPU      1.26s WALL (       1 calls)
+     electrons    :    205.66s CPU    207.01s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
+     wfcinit:atom :      0.08s CPU      0.08s WALL (     100 calls)
+     wfcinit:wfcr :      3.64s CPU      3.71s WALL (     100 calls)
+     potinit      :      0.69s CPU      0.73s WALL (       1 calls)
+     hinit0       :      0.29s CPU      0.30s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :    205.66s CPU    207.00s WALL (       1 calls)
+     v_of_rho     :      0.02s CPU      0.06s WALL (       1 calls)
+     v_h          :      0.00s CPU      0.01s WALL (       1 calls)
+     v_xc         :      0.02s CPU      0.05s WALL (       1 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.06s CPU      0.08s WALL (     100 calls)
+     cegterg      :    201.56s CPU    202.68s WALL (     534 calls)
+
+     Called by sum_band:
+
+     Called by *egterg:
+     cdiaghg      :     25.69s CPU     25.90s WALL (    9985 calls)
+                                       25.83s GPU  (    9985 calls)
+     cegterg:over :     36.12s CPU     36.20s WALL (    9885 calls)
+     cegterg:upda :     11.53s CPU     11.59s WALL (    9885 calls)
+     cegterg:last :     15.64s CPU     15.69s WALL (    7916 calls)
+     h_psi        :    109.78s CPU    110.78s WALL (   10519 calls)
+                                      110.72s GPU  (   10519 calls)
+     g_psi        :      0.08s CPU      1.30s WALL (    9885 calls)
+                                        1.25s GPU  (    9885 calls)
+
+     Called by h_psi:
+     h_psi:calbec :      0.81s CPU     16.95s WALL (   10519 calls)
+                                       16.87s GPU  (   10519 calls)
+     vloc_psi     :     77.22s CPU     78.06s WALL (   10519 calls)
+                                       78.00s GPU  (   10519 calls)
+     add_vuspsi   :      3.05s CPU     14.83s WALL (   10519 calls)
+                                       14.76s GPU  (   10519 calls)
+
+     General routines
+     calbec       :      0.76s CPU      0.81s WALL (   10519 calls)
+     fft          :      0.33s CPU      0.33s WALL (      11 calls)
+                                        0.01s GPU  (      10 calls)
+     ffts         :      0.33s CPU      0.33s WALL (       1 calls)
+     fftw         :      0.90s CPU     65.59s WALL (   29910 calls)
+                                       65.43s GPU  (   29910 calls)
+     interpolate  :      0.66s CPU      0.66s WALL (       1 calls)
+     davcio       :      0.03s CPU      0.22s WALL (     200 calls)
+ 
+     Parallel routines
+ 
+     PWSCF        :   3m27.27s CPU   3m29.03s WALL
+
+ 
+   This run was terminated on:   3:17:21  13Mar2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

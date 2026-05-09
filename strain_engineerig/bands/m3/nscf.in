@@ -1,0 +1,42 @@
+&CONTROL
+  calculation    = 'nscf',
+  prefix         = 'crsi2n4',
+  outdir         = './tmp/',
+  pseudo_dir     = '/home/rao/Desktop/pseudo/ONCVPSP/sg15',
+  verbosity      = 'high',
+/
+
+&SYSTEM
+  ibrav          = 4,
+  a              = 2.75868,
+  c              = 20.76610
+  nat            = 7,
+  ntyp           = 3,
+  ecutwfc        = 80,
+  ecutrho        = 400,
+  assume_isolated = '2D',
+  occupations = 'fixed',
+/
+
+&ELECTRONS
+  conv_thr       = 1.0d-10,
+  mixing_beta    = 0.5,
+  diagonalization = 'david'
+/
+
+ATOMIC_SPECIES
+Cr     51.99600  Cr_ONCV_PBE_sr.upf
+Si     28.08600  Si_ONCV_PBE_sr.upf
+N      14.00700  N_ONCV_PBE_sr.upf
+
+ATOMIC_POSITIONS (crystal)
+Cr               0.8571313723        0.1428504626        0.4278556068
+N                0.5237944962        0.4761891530        0.3719888656
+N                0.5237710473        0.4762091041        0.4843215604
+N                0.8571397547        0.1428322353        0.5970349339
+N                0.1904741198        0.8095150458        0.2602453674
+Si               0.5238110398        0.4761780338        0.2880652478
+Si               0.5238121699        0.4761599654        0.5688524180
+
+K_POINTS {automatic}
+14 14  1  0 0 0
