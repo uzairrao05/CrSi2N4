@@ -1,0 +1,15 @@
+&INPUTPP
+  calculation    = 'eps',
+  outdir         = './tmp/',
+  prefix         = 'crsi2n4',
+/
+
+&ENERGY_GRID
+  smeartype      = 'gauss',
+  intersmear     = 0.10,
+  intrasmear     = 0.0,
+  wmin           = 0.0,
+  wmax           = 15.0,
+  nw             = 1000,
+  shift          = 0.0,
+/
