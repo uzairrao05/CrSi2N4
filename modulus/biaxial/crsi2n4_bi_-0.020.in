@@ -1,0 +1,53 @@
+&CONTROL
+   calculation      = 'scf'
+   verbosity        = 'high'
+   outdir           = './tmp/'
+   prefix           = 'crsi2n4'
+   pseudo_dir       = '/home/rao/Desktop/pseudo/ONCVPSP/sg15'
+/
+&SYSTEM
+   ecutwfc          = 80
+   ecutrho          = 400
+   nosym            = .true.
+   noinv            = .true.
+   occupations      = 'fixed'
+   assume_isolated  = '2D'
+   ntyp             = 3
+   nat              = 7
+   ibrav            = 0
+/
+&ELECTRONS
+   conv_thr         = 1e-10
+   mixing_beta      = 0.4
+/
+&IONS
+/
+&CELL
+/
+&FCP
+/
+&RISM
+/
+ATOMIC_SPECIES
+Cr 51.9961 Cr_ONCV_PBE_sr.upf
+N 14.007 N_ONCV_PBE_sr.upf
+Si 28.085 Si_ONCV_PBE_sr.upf
+
+K_POINTS automatic
+11 11 1  0 0 0
+
+CELL_PARAMETERS angstrom
+2.78712000000000 0.00000000000000 0.00000000000000
+-1.39356000000000 2.41371648000000 0.00000000000000
+0.00000000000000 0.00000000000000 25.76610000000000
+
+ATOMIC_POSITIONS (angstrom)
+Cr               2.1899014129        0.3447743555       11.0264497837
+N                0.7962972762        1.1493753222        9.8707027577
+N                0.7962100087        1.1494188396       12.1952536777
+N                2.1897847648        0.3448279030       14.5239622882
+N               -0.5972515193        1.9539498950        7.5617836195
+Si               0.7964580724        1.1492914350        8.1250320462
+Si               0.7963080092        1.1493523845       13.9529624902
+  
+
