@@ -1,0 +1,39 @@
+&control
+    calculation = 'scf',
+    prefix = 'Cr',
+    outdir = '.',
+    pseudo_dir = '../../../pseudopot'
+/
+&SYSTEM
+    constrained_magnetization = "atomic"
+    degauss                   =  1.00000e-02
+    ecutrho                   =  200
+    ecutwfc                   =  40
+    ibrav                     = 0
+    nat                       = 1
+    nspin                     = 2
+    ntyp                      = 1
+    occupations               = "smearing"
+    smearing                  = "gaussian"
+    starting_magnetization(1) =  1.00000e-01
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-08
+    mixing_beta      =  4.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+K_POINTS {gamma}
+
+CELL_PARAMETERS {angstrom}
+ 30.000000   0.000000   0.000000
+  0.000000  30.000000   0.000000
+  0.000000   0.000000  30.000000
+
+ATOMIC_SPECIES
+Cr     51.99610  Cr.pbe-sp-van.UPF
+
+ATOMIC_POSITIONS {angstrom}
+Cr     15.000000  15.000000  15.000000
