@@ -1,0 +1,47 @@
+&CONTROL
+    calculation  = "scf"
+    outdir       = "."
+    prefix       = "crsi2n4"
+    pseudo_dir   = "../../../pseudo/ONCVPSP/abinit"
+    restart_mode = "from_scratch"
+    verbosity    = "high"
+/
+
+&SYSTEM
+    assume_isolated           = "2D"
+    input_dft                 = "vdw-DF"
+    ecutwfc                   = 80
+    ibrav                = 4
+    celldm(1)            = 5.470908
+    celldm(3)            = 7.172907
+    nat                       = 7
+    ntyp                      = 3
+    occupations               = "smearing"
+    smearing                  = "gauss"
+    degauss                   = 0.01
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-06
+    diagonalization  = "david"
+    mixing_beta      =  4.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+ATOMIC_SPECIES
+Cr     51.99600  Cr_ONCV_PBE_sr.upf
+Si     28.08600  Si_ONCV_PBE_sr.upf
+N      14.00700  N_ONCV_PBE_sr.upf
+
+ATOMIC_POSITIONS (crystal)
+Cr               0.8571372723        1.1428440801        0.4278173535
+N                0.5238036946        0.4761820924        0.3711988600
+N                0.5238014036        0.4761757025        0.4851306992
+N               -0.1428733471        0.1428356492        0.5975513373
+N                1.1904690095        0.8095304554        0.2597647174
+Si               0.5238025137        0.4761961998        0.2855445634
+Si               0.5237934535        0.4761698208        0.5713564695
+
+K_POINTS {automatic}
+8 8  1  0 0 0

@@ -1,0 +1,6 @@
+# Analysis and plotting
+numpy
+matplotlib
+
+# Elastic-strain input generation
+ase

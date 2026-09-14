@@ -1,0 +1,35 @@
+# Local calculation copies and Quantum ESPRESSO runtime state
+/runs/
+tmp/
+*.save/
+_ph*/
+*.wfc*
+*.igk*
+*.mix*
+*.restart*
+*.recover*
+*.bfgs
+*.update
+CRASH
+
+# Wannier90 real-space wavefunction exports
+UNK*
+
+# Local Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# Editor and operating-system temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Keep scientific outputs, numerical data, figures, and Wannier matrices tracked.
+# Deliberately do not ignore *.out, *.dat, *.pdf, *.png, *.amn, *.mmn, or *.chk.
