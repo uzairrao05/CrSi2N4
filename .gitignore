@@ -1,5 +1,3 @@
-# Local calculation copies and Quantum ESPRESSO runtime state
-/runs/
 tmp/
 *.save/
 _ph*/
@@ -29,7 +27,6 @@ __pycache__/
 *.swo
 *~
 .DS_Store
-Thumbs.db
 
 # Keep scientific outputs, numerical data, figures, and Wannier matrices tracked.
 # Deliberately do not ignore *.out, *.dat, *.pdf, *.png, *.amn, *.mmn, or *.chk.
