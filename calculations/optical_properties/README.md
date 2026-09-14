@@ -13,6 +13,6 @@ The calculation order is SCF → NSCF → `epsilon.x`, using a consistent prefix
 and scratch directory. `epsilon.in` defines a 0–15 eV grid with 1,000 points
 and 0.10 eV interband broadening.
 
-The Origin tables are preserved exports. Their conversion/correction script is
+The Origin tables contain processed optical data. Their conversion/correction script is
 not included, so the export names alone do not document the processing method.
 Retain the raw dielectric data alongside any future processing script.

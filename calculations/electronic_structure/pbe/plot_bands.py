@@ -1,6 +1,6 @@
 # Import the necessary packages and modules
 import matplotlib.pyplot as plt
-# Use Matplotlib defaults; the original external sci.mplstyle is not included.
+# Plot using the default Matplotlib style.
 import numpy as np
 
 # The Fermi energy, find it in scf.out

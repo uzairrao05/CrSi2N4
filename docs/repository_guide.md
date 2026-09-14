@@ -2,10 +2,9 @@
 
 ## File organization
 
-`calculations/` is organized by physical property. A calculation's input, output,
-post-processing data, and local scripts stay together. In particular, the
-Wannier90 seed files and the elastic `uniaxial/` and `biaxial/` datasets retain
-their internal filenames and relationships.
+`calculations/` contains one directory per physical property, with inputs,
+outputs, numerical data, and local scripts. Wannier90 files share the
+`crsi2n4` seed name. Elastic datasets are grouped into `uniaxial/` and `biaxial/`.
 
 | File type | Role |
 | --- | --- |
@@ -49,18 +48,15 @@ The ONCV workflows reference `Cr_ONCV_PBE_sr.upf`, `Si_ONCV_PBE_sr.upf`, and
 references, plus a separate phosphorus input. These are distinct reference
 setups; a filename or folder name alone does not establish comparability.
 
-Relative `pseudo_dir` paths were rebased during reorganization to preserve their
-previous targets with respect to the repository location. Absolute paths retain
-the original workstation locations. Both must be reviewed when copying a
-workflow or using another computer. The generator and generated inputs may use
-different pseudopotential locations; configure the generator before creating
-new inputs.
+Set `pseudo_dir` to the appropriate local pseudopotential directory before
+running. Relative paths are resolved from the calculation's working directory;
+absolute paths depend on the workstation. Check the input generator's
+pseudopotential path separately before generating a new strain series.
 
 ## Stored data and missing runtime state
 
-Scientific logs, matrices, force constants, structure exports, and figures are
-tracked. Large existing Wannier90 files remain part of the dataset. Git history
-was not rewritten, and no stored result was removed to reduce repository size.
+Scientific logs, Wannier90 matrices, force constants, structure exports, and
+figures are included with the calculation datasets.
 
 The `.gitignore` excludes local environments and common runtime files while
 allowing scientific `.out`, `.dat`, and figure files to be committed. Keep new
@@ -71,33 +67,3 @@ The MD output/trajectory, phonon dynamical-matrix files consumed by `q2r.x`,
 pseudopotentials, and QE save directories are absent. The phonon force constants
 and dispersion data are present for analysis. Consult each calculation README
 for other limitations of the supplied files.
-
-## Directory migration
-
-| Previous location | Current location |
-| --- | --- |
-| `Cohesive/` | `calculations/cohesive_energy/` |
-| `bands/` (files directly inside) | `calculations/electronic_structure/pbe/` |
-| `bands/hse/` | `calculations/electronic_structure/hse/` |
-| `md/` | `calculations/molecular_dynamics/` |
-| `modulus/` | `calculations/elastic_properties/` |
-| `optical/` | `calculations/optical_properties/` |
-| `phonon/` | `calculations/phonons/` |
-| `strain_engineerig/` | `calculations/strain_engineering/` |
-| `strain_engineerig/xyz files/` | `calculations/strain_engineering/structures/` |
-
-Additional filename changes:
-
-| Previous filename | Current filename | Reason |
-| --- | --- | --- |
-| `plotband.ipynb` | `plot_bands.py` | The file contains Python source, not notebook JSON |
-| `phononplot.ipynb` | `plot_phonons.py` | The file contains Python source, not notebook JSON |
-| `cohesive energy.xlsx` | `cohesive_energy.xlsx` | Consistent filename without spaces |
-| `Tutorial` in the HSE directory | `workflow_notes.txt` | Identify the original plain-text notes |
-
-Numerical outputs, figures, matrices, structures, and workbook contents were
-preserved byte for byte. Edits to existing calculation and launch files only
-rebase relative pseudopotential paths. The two renamed plotting scripts use
-Matplotlib defaults in place of the missing external style file; their data,
-energy reference, axes, and other plotting parameters are unchanged. Their
-LaTeX tick labels use raw strings to avoid Python escape-sequence warnings.

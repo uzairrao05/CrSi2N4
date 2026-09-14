@@ -1,7 +1,7 @@
 # Import the necessary packages and modules
 import matplotlib.pyplot as plt
 import numpy as np
-# Use Matplotlib defaults; the original external sci.mplstyle is not included.
+# Plot using the default Matplotlib style.
 
 # Number of phonon modes and q-points from gr.freq
 nbnd = 21; nks = 91

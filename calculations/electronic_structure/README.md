@@ -21,17 +21,14 @@ Review both before applying it to a new calculation.
 
 ## HSE and Wannier90
 
-All `crsi2n4.*` seed files remain together with the interpolation results,
-Hamiltonian, and Wigner–Seitz data. The supplied `.win` file specifies 35 bands
-and 26 Wannier functions. Original instructions are retained in
+The HSE directory contains `crsi2n4.*` seed files, interpolation results, the
+Hamiltonian, and Wigner–Seitz data. The `.win` file specifies 35 bands and
+26 Wannier functions. See
 [workflow_notes.txt](hse/workflow_notes.txt).
 
-Before rerunning, reconcile those notes with the supplied inputs: `pw2wann.in`
-uses `prefix = 'crsi2n4_open'`, so it requires the state produced by
-`open_grid.x`; the original notes omit that step. The archived `opengrid.in`
-also lacks the terminating `/` for its namelist. These historical files are
-retained as supplied apart from relative pseudopotential paths. The directory
-is a calculation record, and the old notes alone are not a complete rerun recipe.
+`pw2wann.in` uses `prefix = 'crsi2n4_open'` and requires the state produced
+by `open_grid.x`. Include this step when following the workflow notes.
+Before running `opengrid.in`, add the terminating `/` to its input namelist.
 
 See the [repository guide](../../docs/repository_guide.md) for dependencies and
 scratch-data preparation.

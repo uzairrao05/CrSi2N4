@@ -7,9 +7,8 @@ properties, with a separate molecular-dynamics input.
 
 ## Repository contents
 
-Each calculation directory keeps its inputs, corresponding outputs, data, and
-local analysis together. Filenames used by Quantum ESPRESSO and Wannier90 are
-retained so that the relationships between calculation steps remain explicit.
+Each calculation directory contains the input files, output logs, numerical
+data, and analysis scripts for that property.
 
 | Directory | Contents |
 | --- | --- |
@@ -20,7 +19,7 @@ retained so that the relationships between calculation steps remain explicit.
 | [Cohesive energy](calculations/cohesive_energy/) | Monolayer and atomic-reference calculations; energy workbook |
 | [Strain engineering](calculations/strain_engineering/) | Relaxations, band calculations, and structure exports for individual strain values |
 | [Molecular dynamics](calculations/molecular_dynamics/) | MD input and extraction notes; no MD output or trajectory is included |
-| [Documentation](docs/repository_guide.md) | File conventions, rerun preparation, and the previous-to-current directory map |
+| [Documentation](docs/repository_guide.md) | File conventions, dependencies, and calculation setup |
 
 ## Analyze the stored results
 
@@ -50,19 +49,18 @@ Run plotting scripts from the directory containing their data:
 Plotting overwrites the named figure in the current directory. To retain an
 archived figure, run the script in a copy of its calculation directory under
 `runs/`. Set `MPLBACKEND=Agg` when running without a graphical display. The band
-and phonon scripts use Matplotlib defaults because the original external
-`sci.mplstyle` file is not included.
+and phonon scripts use the default Matplotlib style.
 
 ## Calculation environment
 
 The stored Quantum ESPRESSO logs report versions **7.3.1** and **7.4.1**; the
 Wannier90 log reports **3.1.0**. Python analysis uses NumPy and Matplotlib, and
 the elastic-input generator additionally uses ASE. `requirements.txt` lists
-these dependencies; it is not a reconstruction of the original environment.
+these dependencies without fixed version constraints.
 
 Pseudopotentials and Quantum ESPRESSO scratch/restart directories are not
-included. Inputs retain their original physical parameters and pseudopotential
-filenames. Before a new calculation, configure `pseudo_dir`, check `outdir` and
+included. Pseudopotential filenames are specified in each input. Before a new
+calculation, configure `pseudo_dir`, check `outdir` and
 `restart_mode`, and read the relevant calculation README and
 [repository guide](docs/repository_guide.md#running-new-calculations).
 
