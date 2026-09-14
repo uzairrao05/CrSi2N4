@@ -2,5 +2,4 @@
 numpy
 matplotlib
 
-# Elastic-strain input generation
 ase
